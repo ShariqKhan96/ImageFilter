@@ -309,6 +309,9 @@ public class MainActivity extends AppCompatActivity implements EditPictureListen
     public void onFilterSelected(Filter filter) {
 
         resetControls();
+
+        //copy of image
+
         filteredImage = originalImage.copy(Bitmap.Config.ARGB_8888, true);
         imageView.getSource().setImageBitmap(filter.processFilter(filteredImage));
         finalImage = filteredImage.copy(Bitmap.Config.ARGB_8888, true);
